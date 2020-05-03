@@ -97,7 +97,6 @@ nav a {
 }
 
 .latest {
-  height: 428px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -106,12 +105,29 @@ nav a {
   margin: 0 auto;
 }
 
+.latest__top-bar {
+  display: flex;
+  width: 222px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 42px;
+  margin-bottom: 11px;
+}
+
+.latest__likes span, .latest__comments span, .latest__views span {
+  margin-left: 4px;
+  font-size: 24px;
+  color: #CDCDCD;
+  letter-spacing: -0.416667px;
+}
+
 .latest__heading {
   font-size: 45px;
   line-height: 52px;
   letter-spacing: -0.416667px;
   color: #315AF2;
   width: 672px;
+  margin-top: 0 !important;
 }
 
 .latest__content {
@@ -127,6 +143,7 @@ nav a {
   margin-top: 20px;
   border-radius: 3px;
   height: 68px;
+  margin-bottom: 57px;
 }
 
 .latest__button a {
@@ -167,16 +184,25 @@ nav a {
 }
 
 .other .col {
-  min-height: 300px;
-  height: 300px;
+  min-height: 310px;
+  height: 310px;
   width: 335px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   border: 2px solid #CDCDCD;
   border-radius: 3px;
   background: #FFFFFF;
   box-sizing: border-box;
+  padding: 15px 22px;
+}
+
+.other .col:hover {
+  background: #FFFFFF;
+  border: 2px solid #E2EDF8;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 10px #E2EDF8;
+  border-radius: 3px;
 }
 
 .other__date {
@@ -184,7 +210,6 @@ nav a {
   line-height: 20px;
   color: #979797;
   letter-spacing: -0.416667px;
-  margin-top: 15px;
 }
 
 .other__img {
@@ -230,7 +255,6 @@ nav a {
   height: 29px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
 }
 
 .other__bottom-left {

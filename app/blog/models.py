@@ -17,6 +17,10 @@ class Post(models.Model):
         self.published_date = timezone.now()
         self.save()
 
+    @property
+    def formatted_date(self):
+        return self.created_date.strftime('%d %B %Y %H:%M')
+
     def __str__(self):
         return self.title
 

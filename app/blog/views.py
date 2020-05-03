@@ -13,7 +13,7 @@ def index(request):
                 'tag': p.tag, 
                 'text': p.text, 
                 'image': f'media/{p.image.name}',
-                'created_date': p.created_date,
+                'created_date': p.formatted_date,
                 'views': p.views.count(),
                 'likes': p.likes.count(),
                 'comments': p.comments.count() 
