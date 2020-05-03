@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+body {
+  background: #ffffff;
+  font-family: "Jost", sans-serif; }
+
+nav {
+  background: #ffffff;
+  width: 100%;
+  height: 102px;
+  border-bottom: 2px solid #cdcdcd; }
+  nav a {
+    color: black !important; }
+
+.nav-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 21px;
+  padding-right: 21px; }
+  .nav-wrapper .nav__wrapper-left {
+    display: flex;
+    height: 72.28px;
+    align-items: center; }
+    .nav-wrapper .nav__wrapper-left > * {
+      display: flex; }
+  .nav-wrapper .nav__wrapper-right ul {
+    display: flex;
+    align-items: center; }
+  .nav-wrapper .nav__wrapper-right a {
+    display: flex;
+    align-items: center; }
+
+.nav__logo {
+  width: 190px;
+  height: 72.28px;
+  background: url(../img/Logo_Kodland.png); }
+
+.nav__title {
+  width: max-content;
+  height: 31px;
+  font-size: 24px;
+  line-height: 31px;
+  color: #010101; }
+
+.button:hover,
+.button:active {
+  background: rgba(49, 90, 242, 0.75); }
+
+.latest {
+  height: 428px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto; }
+  .latest .latest__heading {
+    font-size: 45px;
+    line-height: 52px;
+    letter-spacing: -0.416667px;
+    color: #315af2;
+    width: 672px; }
+  .latest .latest__content {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.416667px;
+    color: #000000;
+    width: 391px; }
+  .latest .latest__button {
+    margin-top: 20px;
+    border-radius: 3px;
+    height: 68px; }
+    .latest .latest__button a {
+      display: flex;
+      align-items: center;
+      background: #315af2;
+      font-size: 36px;
+      text-transform: none;
+      letter-spacing: -0.416667px;
+      color: #ffffff; }
+  .latest .latest__img {
+    position: absolute;
+    height: 568px;
+    right: -200px;
+    top: -5px;
+    z-index: -1; }
+
+.divider {
+  height: 2px; }
+
+.other .others__heading {
+  font-size: 36px;
+  line-height: 20px;
+  letter-spacing: -0.416667px;
+  color: #315af2; }
+
+.other .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; }
+
+.other .col {
+  min-height: 300px;
+  height: 300px;
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #cdcdcd;
+  border-radius: 3px;
+  background: #ffffff;
+  box-sizing: border-box; }
+
+.other .other__date {
+  font-size: 12px;
+  line-height: 20px;
+  color: #979797;
+  letter-spacing: -0.416667px;
+  margin-top: 15px; }
+
+.other .other__img {
+  min-height: 112px;
+  width: 217px;
+  margin: 0 auto; }
+
+.other .other__img-1 {
+  background: center/cover url(../img/1Statya_2.png); }
+
+.other .other__tag {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: -0.416667px;
+  color: #000000;
+  margin: 0 auto; }
+
+.other .other__heading {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.416667px;
+  color: #315af2;
+  width: 258px;
+  margin: 0 auto; }
+
+.other .other__bottom {
+  height: 29px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0; }
+  .other .other__bottom > * {
+    display: flex;
+    align-items: center;
+    width: 56px; }
+    .other .other__bottom > * > span {
+      margin-left: 4px;
+      font-size: 24px;
+      color: #cdcdcd;
+      letter-spacing: -0.416667px; }
+
+.other .other__bottom-left {
+  display: flex;
+  width: 50%;
+  justify-content: space-around; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-height: 562px;
+  flex-wrap: wrap; }
+
+form p {
+  margin-top: 0; }
+
+form input[type="text"] {
+  background: #ffffff;
+  border: 2px solid #cdcdcd !important;
+  border-radius: 3px !important;
+  width: 882px !important; }
+
+form textarea {
+  background: #ffffff;
+  border: 2px solid #cdcdcd;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 881px;
+  min-height: 420px; }
+
+form button[type="submit"] {
+  background: #e9399c;
+  height: 50px;
+  width: 159px;
+  font-size: 18px;
+  text-align: center;
+  padding: 0;
+  border-radius: 3px;
+  margin-bottom: 24px; }
+
+form :nth-child(4) {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  width: 298px;
+  background: #ffffff;
+  border: 2px solid #cdcdcd;
+  box-sizing: border-box;
+  border-radius: 3px;
+  min-height: 135px; }
+
+form :nth-child(4) label {
+  display: none; }
+
+form :nth-child(4) span {
+  width: 255px;
+  height: 31px;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+  color: #315af2;
+  margin: 11px; }
+
+form input[type="file"] {
+  border-radius: 3px;
+  width: 155px;
+  height: 50px; }
+
+form input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden; }
+
+form input[type="file"]::before {
+  content: "Выбрать";
+  display: inline-block;
+  background: #315af2;
+  border-radius: 3px;
+  width: 155px;
+  height: 50px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  padding: 14px 0; }
+
+form input[type="file"]:hover::before {
+  border-color: black; }
+
+form input[type="file"]:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); }
+
+/*# sourceMappingURL=style.css.map */

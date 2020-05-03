@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}Блог / Добавить статью{% endblock %}
+
+{% block content %}
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="latest__heading">Добавить статью</h1>
+            <form method="POST" class="post-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <img src="{% static 'img/wysiwyg.svg' %}">
+                <button type="submit" class="save btn button">Опубликовать</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    const file = document.querySelector('input[type="file"]');
+    const uploadWrapper = document.querySelector('form');
+
+    file.addEventListener('change', e => {
+        const image = document.createElement('img') 
+        image.src = URL.createObjectURL(event.target.files[0])
+        image.style.objectFit = 'cover'
+        image.style.maxHeight = '260px'
+        image.style.maxWidth = '286px'
+        image.style.margin = '0 auto'
+        image.style.order = '-1'
+        image.style.position = 'relative'
+
+        const closeBtn = document.createElement('button')
+        closeBtn.innerHTML = `
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="#E5E5E5"/>
+            <line x1="16.9498" y1="7.05025" x2="7.05029" y2="16.9497" stroke="white" stroke-width="2"/>
+            <line x1="16.9496" y1="16.9498" x2="7.05014" y2="7.05029" stroke="white" stroke-width="2"/>
+            </svg>`
+        closeBtn.style.position = 'absolute'
+        closeBtn.style.top = 13
+        closeBtn.style.right = 10
+        closeBtn.style.width = "24px"
+        closeBtn.style.height = "24px"
+        
+
+        uploadWrapper.querySelector('p:nth-child(4)').appendChild(image)
+        uploadWrapper.querySelector('p:nth-child(4)').appendChild(closeBtn)
+
+        file.remove()
+    })
+</script>
+
+{% endblock %}
