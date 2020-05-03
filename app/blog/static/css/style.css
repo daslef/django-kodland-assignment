@@ -355,6 +355,7 @@ form input[type="file"] {
   border-radius: 3px;
   width: 155px;
   height: 50px;
+  color: rgba(0,0,0,0);
 }
 
 form input[type="file"]::-webkit-file-upload-button {
@@ -430,19 +431,24 @@ form textarea {
   margin-bottom: 25px;
 }
 
+.upload-wrapper {
+  width: 100%;
+  position: relative;
+  order: 1;
+}
+
 .form__uploaded {
   object-fit: cover;
   max-height: 260px;
-  max-width: 286px;
+  max-width: 100%;
   margin: 0 auto;
-  order: -1;
   position: relative;
 }
 
 .form__button-close {
   position: absolute;
-  top: 13;
-  right: 10;
+  top: 13px;
+  right: 10px;
   width: 24px;
   height: 24px;
 }

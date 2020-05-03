@@ -7,6 +7,8 @@ file.addEventListener('change', e => {
     const image = document.createElement('img') 
     const closeBtn = document.createElement('a')
 
+    uploadWrapper.classList.add('upload-wrapper')
+
     image.src = URL.createObjectURL(event.target.files[0])
     image.classList.add('form__uploaded')
 
@@ -20,18 +22,14 @@ file.addEventListener('change', e => {
 
     closeBtn.addEventListener('click', function() {
         image.remove()
+        uploadWrapper.remove()
         this.remove()
-        const file = document.createElement('input')
-        file.setAttribute('type', 'file')
-        file.setAttribute('name', 'image')
-        file.setAttribute('accept', 'image/*')
-        file.setAttribute('id', 'id_image')
-        form.querySelector('p:nth-child(4)').appendChild(uploadWrapper)
+        file.style.display = 'flex'
     })
     
     uploadWrapper.appendChild(image)
     uploadWrapper.appendChild(closeBtn)
 
     form.querySelector('p:nth-child(4)').appendChild(uploadWrapper)
-    // file.remove()
+    file.style.display = 'none'
 })
