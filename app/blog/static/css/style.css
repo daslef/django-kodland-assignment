@@ -189,8 +189,14 @@ nav a {
 
 .other__img {
   min-height: 112px;
+  max-height: 112px;
   width: 217px;
   margin: 0 auto;
+}
+
+.other__img img {
+  height: 112px;
+  object-fit: contain;
 }
 
 .other__tag {

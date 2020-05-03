@@ -9,7 +9,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     tag = models.CharField(max_length=60)
     text = models.TextField()
-    image = models.ImageField(upload_to ='blog/uploads/', default='uploads/default.jfif', help_text='Загрузить изображение', blank=True, null=True)
+    image = models.ImageField(upload_to ='', default='default.jfif', help_text='Загрузить изображение', blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 

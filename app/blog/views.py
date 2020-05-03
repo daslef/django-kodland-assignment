@@ -6,12 +6,13 @@ from django.utils import timezone
 from .models import Author, Post
 from .forms import PostForm
 
+
 def index(request):
     posts = Post.objects.all().order_by('-created_date')[:10]
     posts = [{ 'title': p.title, 
                 'tag': p.tag, 
                 'text': p.text, 
-                'image': p.image.name,
+                'image': f'media/{p.image.name}',
                 'created_date': p.created_date,
                 'views': p.views.count(),
                 'likes': p.likes.count(),

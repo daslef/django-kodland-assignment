@@ -2,7 +2,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
@@ -116,3 +115,8 @@ STATIC_URL = '/static/'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 SASS_PRECISION = 8
+
+# Media
+
+MEDIA_URL = 'blog/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'blog', 'media')
